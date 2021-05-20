@@ -16,14 +16,16 @@
 
 <body>
     <div class="container">
-        <span>Last apdated: </span>
-        <span class="day" id="date"> </span>
+        <span class="day">Last apdated: </span>
+        <span class="day" id="date"></span>
 
         <div class="card">
-            <form class="searchForm" id="search-form">
-                <input type="text" class="searchCity" id="search-city" placeholder="Enter City" autocomplete="off" />
-                <input class="searchButton" type="submit" value="Search" />
-            </form>
+            <div class="row">
+                <form class="searchForm" id="search-form">
+                    <input type="text" class="searchCity" id="search-city" placeholder="Enter City" autocomplete="off" />
+                    <input class="searchButton" type="submit" value="Search" />
+                </form>
+            </div>
             <div class="row">
                 <div class="col-7">
                     <h1 class="city" id="city"></h1>
@@ -34,8 +36,8 @@
                     </ul>
                 </div>
                 <div class="col-5">
-                    <span class="icon" id="icon"><i class="fas fa-cloud"></i></span>
-                    <h1 class="temp" id="temperature"></h1>
+                    <img src="" class="icon" id="icon" alt="" width="100px" />
+                    <span class="temp" id="temperature"></span>
                     <span class="units">°C | F</span>
                 </div>
             </div>
