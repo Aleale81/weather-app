@@ -10,11 +10,43 @@
     <title>Vanilla Weather App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/0032934867.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="contaner">
-        <h1>Weather App</h1>
+    <div class="container">
+        <small class="day" id="date">Thu 20 May, 15:59</small>
+        <div class="card">
+            <form class="searchForm" id="search-form">
+                <input type="text" class="searchCity" id="search-city" placeholder="Enter City" autocomplete="off" />
+                <input class="searchButton" type="submit" value="Search" />
+            </form>
+            <div class="row">
+                <div class="col-7">
+                    <h1 class="city" id="city">Amsterdam,NL</h1>
+                    <ul class="info">
+                        <li class="sky" id="sky">Mostly Cloudy</li>
+                        <li class="humidity" id="humidity">Humidity: 57%</li>
+                        <li class="wind" id="wind">Wind: 23 km/hr</li>
+                    </ul>
+                </div>
+                <div class="col-5">
+                    <h1 class="temp" id="temperature">
+                        <i class="fas fa-cloud"></i> 16° <span class="units">C | F</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <small class="footer">
+				Coded by Alessandra Scarpellini,
+				<a
+					class="github"
+					href="https://github.com/Aleale81/my-weather-forecast"
+					target="_blank"
+					>Open-sourced on GitHub<i class="fab fa-github"></i
+				></a>
+			</small>
     </div>
     <script src="src/app.js"></script>
 </body>
