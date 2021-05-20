@@ -16,7 +16,9 @@
 
 <body>
     <div class="container">
-        <small class="day" id="date">Thu 20 May, 15:59</small>
+        <span>Last apdated: </span>
+        <span class="day" id="date"> </span>
+
         <div class="card">
             <form class="searchForm" id="search-form">
                 <input type="text" class="searchCity" id="search-city" placeholder="Enter City" autocomplete="off" />
@@ -24,17 +26,17 @@
             </form>
             <div class="row">
                 <div class="col-7">
-                    <h1 class="city" id="city">Amsterdam,NL</h1>
+                    <h1 class="city" id="city"></h1>
                     <ul class="info">
-                        <li class="sky" id="sky">Mostly Cloudy</li>
-                        <li class="humidity" id="humidity">Humidity: 57%</li>
-                        <li class="wind" id="wind">Wind: 23 km/hr</li>
+                        <li class="sky" id="sky"></li>
+                        <li class="humidity">Humidity: <span id="humidity"></span>%</li>
+                        <li class="wind">Wind: <span id="wind"></span> km/hr</li>
                     </ul>
                 </div>
                 <div class="col-5">
-                    <h1 class="temp" id="temperature">
-                        <i class="fas fa-cloud"></i> 16° <span class="units">C | F</span>
-                    </h1>
+                    <span class="icon" id="icon"><i class="fas fa-cloud"></i></span>
+                    <h1 class="temp" id="temperature"></h1>
+                    <span class="units">°C | F</span>
                 </div>
             </div>
         </div>
