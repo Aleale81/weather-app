@@ -38,7 +38,7 @@ function formatDate(timestamp) {
     }
 
     let time = `${hours}:${minutes}`;
-    let today = `${currentDay} ${currentDate} ${currentMonth}, ${time}`;
+    let today = `Last updated: ${currentDay} ${currentDate} ${currentMonth}, ${time}`;
     return today;
 }
 
@@ -46,13 +46,15 @@ function showTemperaure(response) {
     console.log(response);
     let city = document.querySelector("#city");
     let temperatureElement = document.querySelector("#temperature");
+    temperature = response.data.main.temp;
     let descriptionElement = document.querySelector("#sky");
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
     let iconElement = document.querySelector("#icon");
     let dateElement = document.querySelector("#date");
+
     city.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
-    temperatureElement.innerHTML = Math.round(response.data.main.temp);
+    temperatureElement.innerHTML = Math.round(temperature);
     descriptionElement.innerHTML = response.data.weather[0].description;
     humidityElement.innerHTML = response.data.main.humidity;
     windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -64,7 +66,28 @@ function showTemperaure(response) {
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
+function swithcToFah(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    let fahtemperature = (temperature * 9) / 5 + 32;
+    temperatureElement.innerHTML = Math.round(fahtemperature);
+}
+
+function switchToCel(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML = Math.round(temperature);
+}
+
 let apikey = "c0e61b09ce3783df76abc904136f7ab8";
 let city = "Amsterdam";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
 axios.get(apiUrl).then(showTemperaure);
+
+let temperature = null;
+
+let fahLink = document.querySelector("#fahLink");
+fahLink.addEventListener("click", swithcToFah);
+
+let celLink = document.querySelector("#celLink");
+celLink.addEventListener("click", switchToCel);

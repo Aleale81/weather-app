@@ -16,10 +16,10 @@
 
 <body>
     <div class="container">
-        <span class="day">Last apdated: </span>
-        <span class="day" id="date"></span>
-
         <div class="card">
+            <div class="row">
+                <span class="day" id="date"></span>
+            </div>
             <div class="row">
                 <form class="searchForm" id="search-form">
                     <input type="text" class="searchCity" id="search-city" placeholder="Enter City" autocomplete="off" />
@@ -38,11 +38,14 @@
                 <div class="col-5">
                     <img src="" class="icon" id="icon" alt="" width="100px" />
                     <span class="temp" id="temperature"></span>
-                    <span class="units">°C | F</span>
-                </div>
-            </div>
-        </div>
-        <small class="footer">
+                    <span class="units">
+							<a href="" id="celLink" class="active">°C</a> |
+							<a href="" id="fahLink">°F</a></span
+						>
+					</div>
+				</div>
+			</div>
+			<small class="footer">
 				Coded by Alessandra Scarpellini,
 				<a
 					class="github"
@@ -51,8 +54,7 @@
 					>Open-sourced on GitHub<i class="fab fa-github"></i
 				></a>
 			</small>
-    </div>
-    <script src="src/app.js"></script>
-</body>
-
+		</div>
+		<script src="src/app.js"></script>
+	</body>
 </html>
