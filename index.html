@@ -16,44 +16,52 @@
 
 <body>
     <div class="container">
-        <div class="card">
-            <div class="row">
-                <span class="day" id="date"></span>
-            </div>
-            <div class="row">
-                <form class="searchForm" id="search-form">
-                    <input type="text" class="searchCity" id="search-city" placeholder="Enter City" autocomplete="off" />
-                    <input class="searchButton" type="submit" value="Search" />
-                </form>
-            </div>
-            <div class="row">
-                <div class="col-7">
-                    <h1 class="city" id="city"></h1>
-                    <ul class="info">
-                        <li class="sky" id="sky"></li>
-                        <li class="humidity">Humidity: <span id="humidity"></span>%</li>
-                        <li class="wind">Wind: <span id="wind"></span> km/hr</li>
-                    </ul>
+        <div class="page">
+            <div class="card">
+                <div class="row">
+                    <span class="day" id="date"></span>
                 </div>
-                <div class="col-5">
-                    <img src="" class="icon" id="icon" alt="" width="100px" />
-                    <span class="temp" id="temperature"></span>
-                    <span class="units">
-							<a href="" id="celLink" class="active">°C</a> |
-							<a href="" id="fahLink">°F</a></span
-						>
+
+                <form id="search-form">
+                    <div class="row">
+                        <div class="col-9">
+                            <input type="search" class="form-control text-capitalize" id="search-city" placeholder="Enter City" autocomplete="off" />
+                        </div>
+                        <div class="col-3">
+                            <input class="btn btn-outline-danger" type="submit" value="Search" />
+                        </div>
+                    </div>
+                </form>
+
+                <div class="row">
+                    <div class="col-7">
+                        <h1 class="city text-capitalize" id="city"></h1>
+                        <ul class="info">
+                            <li class="sky text-capitalize" id="sky"></li>
+                            <li class="humidity">Humidity: <span id="humidity"></span>%</li>
+                            <li class="wind">Wind: <span id="wind"></span> km/hr</li>
+                        </ul>
+                    </div>
+                    <div class="col-5">
+                        <img src="" class="icon" id="icon" alt="" width="100px" />
+                        <span class="temp" id="temperature"></span>
+                        <span class="units">
+								<a href="" id="celLink" class="active">°C</a> |
+								<a href="" id="fahLink">°F</a></span
+							>
+						</div>
 					</div>
 				</div>
+				<small class="footer">
+					Coded by Alessandra Scarpellini,
+					<a
+						class="github"
+						href="https://github.com/Aleale81/my-weather-forecast"
+						target="_blank"
+						>Open-sourced on GitHub<i class="fab fa-github"></i
+					></a>
+				</small>
 			</div>
-			<small class="footer">
-				Coded by Alessandra Scarpellini,
-				<a
-					class="github"
-					href="https://github.com/Aleale81/my-weather-forecast"
-					target="_blank"
-					>Open-sourced on GitHub<i class="fab fa-github"></i
-				></a>
-			</small>
 		</div>
 		<script src="src/app.js"></script>
 	</body>

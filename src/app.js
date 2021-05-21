@@ -43,7 +43,6 @@ function formatDate(timestamp) {
 }
 
 function showTemperaure(response) {
-    console.log(response);
     let city = document.querySelector("#city");
     let temperatureElement = document.querySelector("#temperature");
     temperature = response.data.main.temp;
@@ -79,12 +78,22 @@ function switchToCel(event) {
     temperatureElement.innerHTML = Math.round(temperature);
 }
 
-let apikey = "c0e61b09ce3783df76abc904136f7ab8";
-let city = "Amsterdam";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
-axios.get(apiUrl).then(showTemperaure);
+function search(city) {
+    let apikey = "c0e61b09ce3783df76abc904136f7ab8";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
+    axios.get(apiUrl).then(showTemperaure);
+}
 
+function getCity(event) {
+    event.preventDefault();
+    let searchCityElement = document.querySelector("#search-city");
+    search(searchCityElement.value);
+}
+
+search("Amsterdam");
 let temperature = null;
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", getCity);
 
 let fahLink = document.querySelector("#fahLink");
 fahLink.addEventListener("click", swithcToFah);
