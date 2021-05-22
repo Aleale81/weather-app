@@ -38,7 +38,7 @@ function formatDate(timestamp) {
     }
 
     let time = `${hours}:${minutes}`;
-    let today = `Last updated: ${currentDay} ${currentDate} ${currentMonth}, ${time}`;
+    let today = ` ${currentDay} ${currentDate} ${currentMonth}, Last updated: ${time}`;
     return today;
 }
 
@@ -68,6 +68,8 @@ function showTemperaure(response) {
 function swithcToFah(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
+    celLink.classList.remove("active");
+    fahLink.classList.add("active");
     let fahtemperature = (temperature * 9) / 5 + 32;
     temperatureElement.innerHTML = Math.round(fahtemperature);
 }
@@ -75,6 +77,8 @@ function swithcToFah(event) {
 function switchToCel(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
+    celLink.classList.add("active");
+    fahLink.classList.remove("active");
     temperatureElement.innerHTML = Math.round(temperature);
 }
 
@@ -90,7 +94,6 @@ function getCity(event) {
     search(searchCityElement.value);
 }
 
-search("Amsterdam");
 let temperature = null;
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", getCity);
@@ -100,3 +103,5 @@ fahLink.addEventListener("click", swithcToFah);
 
 let celLink = document.querySelector("#celLink");
 celLink.addEventListener("click", switchToCel);
+
+search("Amsterdam");

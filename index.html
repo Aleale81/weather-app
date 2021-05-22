@@ -17,18 +17,18 @@
 <body>
     <div class="container">
         <div class="page">
-            <div class="card">
+            <div class="card night">
                 <div class="row">
-                    <span class="day" id="date"></span>
+                    <span class="date" id="date"></span>
                 </div>
 
-                <form id="search-form">
+                <form id="search-form" class="form">
                     <div class="row">
                         <div class="col-9">
-                            <input type="search" class="form-control text-capitalize" id="search-city" placeholder="Enter City" autocomplete="off" />
+                            <input type="search" class="form-control text-capitalize" id="search-city" placeholder="Enter City 🌍" autocomplete="off" />
                         </div>
                         <div class="col-3">
-                            <input class="btn btn-outline-danger" type="submit" value="Search" />
+                            <input class="btn btn-danger" type="submit" value="Search" />
                         </div>
                     </div>
                 </form>
@@ -36,33 +36,41 @@
                 <div class="row">
                     <div class="col-7">
                         <h1 class="city text-capitalize" id="city"></h1>
-                        <ul class="info">
-                            <li class="sky text-capitalize" id="sky"></li>
-                            <li class="humidity">Humidity: <span id="humidity"></span>%</li>
-                            <li class="wind">Wind: <span id="wind"></span> km/hr</li>
-                        </ul>
                     </div>
                     <div class="col-5">
-                        <img src="" class="icon" id="icon" alt="" width="100px" />
-                        <span class="temp" id="temperature"></span>
+                        <h1 class="temp" id="temperature"></h1>
                         <span class="units">
 								<a href="" id="celLink" class="active">°C</a> |
-								<a href="" id="fahLink">°F</a></span
-							>
-						</div>
-					</div>
-				</div>
-				<small class="footer">
-					Coded by Alessandra Scarpellini,
+								<a href="" id="fahLink">°F</a>
+							</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <ul class="info">
+                                <li class="sky text-capitalize" id="sky"></li>
+                                <li class="humidity">
+                                    Humidity: <span id="humidity"></span>%
+                                </li>
+                                <li class="wind">Wind: <span id="wind"></span> km/hr</li>
+                            </ul>
+                        </div>
+                        <div class="col-5">
+                            <img src="" class="icon" id="icon" alt="" width="100px" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <small class="footer">
 					<a
 						class="github"
 						href="https://github.com/Aleale81/my-weather-forecast"
 						target="_blank"
-						>Open-sourced on GitHub<i class="fab fa-github"></i
-					></a>
+						>Open-source on GitHub <i class="fab fa-github"></i></a
+					>, by Alessandra Scarpellini
 				</small>
-			</div>
-		</div>
-		<script src="src/app.js"></script>
-	</body>
+        </div>
+    </div>
+    <script src="src/app.js"></script>
+</body>
+
 </html>
