@@ -25,7 +25,7 @@
 }
 
 .night {
-    background: linear-gradient( to top, rgb(221, 221, 221) 0%, rgb(25, 46, 152) 80%);
+    background: linear-gradient( to top, rgb(221, 221, 221) 0%, rgb(25, 46, 152) 100%);
 }
 
 .date {
