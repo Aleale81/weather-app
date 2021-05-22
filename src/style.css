@@ -6,17 +6,32 @@
 }
 
 .card {
-    background: radial-gradient( 592px at 48.2% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(249, 253, 214, 0.932) 74.6%);
-    border: 2px solid #4e4e4d;
+    border: 2px solid rgb(61, 71, 112);
     border-radius: 10px;
     text-align: center;
     padding: 5px;
 }
 
+.morning {
+    background: linear-gradient( to bottom, rgba(248, 223, 238, 0.87) 0%, rgba(255, 254, 190, 0.815) 74.6%);
+}
+
+.midday {
+    background: linear-gradient( to bottom, rgb(196, 214, 252) 1%, rgba(187, 187, 187, 0) 80%);
+}
+
+.afternoon {
+    background: linear-gradient(to top, #df89b5 -10%, #bfd9fe 100%);
+}
+
+.night {
+    background: linear-gradient( to top, rgb(221, 221, 221) 0%, rgb(25, 46, 152) 80%);
+}
+
 .date {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     color: rgb(95, 99, 160);
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .form {
@@ -24,8 +39,9 @@
 }
 
 .form-control {
-    box-shadow: 2px 2px 2px rgb(131, 129, 129);
+    box-shadow: 2px 2px 2px rgb(153, 151, 151);
     background: rgba(255, 255, 255, 0.8);
+    margin-left: 5px;
 }
 
 .form-control:focus {
@@ -36,7 +52,7 @@
     background: rgb(95, 99, 160);
     border: 1px solid rgb(95, 99, 160);
     color: rgba(255, 255, 255, 0.8);
-    box-shadow: 2px 2px 2px rgb(131, 129, 129);
+    box-shadow: 2px 2px 2px rgb(153, 151, 151);
 }
 
 .btn:hover {
@@ -94,7 +110,16 @@ a {
 }
 
 .footer {
+    margin-top: 3px;
     margin-left: 5px;
     color: rgb(61, 71, 112);
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.footer a {
+    color: rgb(7, 7, 155);
+}
+
+.night-date {
+    color: rgba(255, 255, 255, 0.8);
 }

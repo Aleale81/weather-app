@@ -37,6 +37,25 @@ function formatDate(timestamp) {
         minutes = `0${minutes}`;
     }
 
+    function changeCardColor(hours) {
+        let card = document.querySelector("#card");
+        if (hours >= 6 && hours < 9) {
+            card.classList.add("morning");
+        }
+        if (hours >= 9 && hours < 17) {
+            card.classList.add("midday");
+        }
+        if (hours >= 17 && hours < 20) {
+            card.classList.add("afternoon");
+        }
+        if (hours < 6 || hours >= 20) {
+            card.classList.add("night");
+            let date = document.querySelector("#date");
+            date.classList.add("night-date");
+        }
+    }
+    changeCardColor(hours);
+
     let time = `${hours}:${minutes}`;
     let today = ` ${currentDay} ${currentDate} ${currentMonth}, Last updated: ${time}`;
     return today;
