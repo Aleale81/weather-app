@@ -61,6 +61,27 @@ function formatDate(timestamp) {
     return today;
 }
 
+function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+    let forecastHTML = `<div class="row">`;
+    let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+    days.forEach(function(day) {
+        forecastHTML =
+            forecastHTML +
+            `<div class="col">
+               <div class="forecast-date">${day}</div>
+               <img src="http://openweathermap.org/img/wn/04d@2x.png" class="icon" alt="" width="50px" />
+               <div class="forecast-temp">
+                 <span class="forecast-temp-max">13°</span>
+                 <span class="forecast-temp-min">9°</span>
+               </div>
+            </div>`;
+    });
+
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemperaure(response) {
     let city = document.querySelector("#city");
     let temperatureElement = document.querySelector("#temperature");
@@ -124,3 +145,4 @@ let celLink = document.querySelector("#celLink");
 celLink.addEventListener("click", switchToCel);
 
 search("Amsterdam");
+displayForecast();
