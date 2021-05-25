@@ -52,6 +52,8 @@ function formatDate(timestamp) {
         if (hours < 6 || hours >= 20) {
             card.classList.add("night");
             let date = document.querySelector("#date");
+            let info = document.querySelector("#info");
+            info.classList.add("night-date");
             date.classList.add("night-date");
         }
     }
@@ -72,7 +74,8 @@ function formatDay(timestamp) {
 
 function getForecast(coordinates) {
     let apikey = "c0e61b09ce3783df76abc904136f7ab8";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apikey}&units=metric`;
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apikey}&units=${units}`;
     axios.get(apiUrl).then(displayForecast);
 }
 

@@ -34,10 +34,6 @@
     margin-bottom: 5px;
 }
 
-.night-date {
-    color: rgba(255, 255, 255, 0.8);
-}
-
 .form {
     margin-bottom: 10px;
 }
@@ -111,6 +107,10 @@ a {
     font-size: 18px;
     color: rgb(95, 99, 160);
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.night-date {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .forecast {
