@@ -34,6 +34,10 @@
     margin-bottom: 5px;
 }
 
+.night-date {
+    color: rgba(255, 255, 255, 0.8);
+}
+
 .form {
     margin-bottom: 10px;
 }
@@ -109,6 +113,21 @@ a {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.forecast {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: rgb(95, 99, 160);
+}
+
+.forecast-date {
+    font-size: larger;
+    font-weight: bolder;
+    color: rgb(61, 71, 112);
+}
+
+.forecast-temp-max {
+    font-weight: bold;
+}
+
 .footer {
     margin-top: 3px;
     margin-left: 5px;
@@ -118,8 +137,4 @@ a {
 
 .footer a {
     color: rgb(7, 7, 155);
-}
-
-.night-date {
-    color: rgba(255, 255, 255, 0.8);
 }
