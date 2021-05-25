@@ -78,13 +78,13 @@ function getForecast(coordinates) {
 
 function displayForecast(response) {
     let dailyForecast = response.data.daily;
-    console.log(dailyForecast);
+
     let forecastElement = document.querySelector("#forecast");
 
     let forecastHTML = `<div class="row">`;
 
     dailyForecast.forEach(function(forecastday, index) {
-        if (index < 5) {
+        if (index > 0 && index < 6) {
             forecastHTML =
                 forecastHTML +
                 `<div class="col">
@@ -105,7 +105,7 @@ function displayForecast(response) {
     });
 
     forecastHTML = forecastHTML + `</div>`;
-    console.log(forecastElement);
+
     forecastElement.innerHTML = forecastHTML;
 }
 
