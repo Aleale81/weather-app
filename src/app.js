@@ -137,23 +137,6 @@ function showTemperaure(response) {
     getForecast(response.data.coord);
 }
 
-function swithcToFah(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    celLink.classList.remove("active");
-    fahLink.classList.add("active");
-    let fahtemperature = (temperature * 9) / 5 + 32;
-    temperatureElement.innerHTML = Math.round(fahtemperature);
-}
-
-function switchToCel(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    celLink.classList.add("active");
-    fahLink.classList.remove("active");
-    temperatureElement.innerHTML = Math.round(temperature);
-}
-
 function search(city) {
     let apikey = "c0e61b09ce3783df76abc904136f7ab8";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
@@ -169,11 +152,5 @@ function getCity(event) {
 let temperature = null;
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", getCity);
-
-let fahLink = document.querySelector("#fahLink");
-fahLink.addEventListener("click", swithcToFah);
-
-let celLink = document.querySelector("#celLink");
-celLink.addEventListener("click", switchToCel);
 
 search("Amsterdam");

@@ -1,7 +1,7 @@
 /** @format */
 
 .page {
-    max-width: 600px;
+    max-width: 560px;
     margin: 20px auto;
 }
 
@@ -79,24 +79,11 @@
     margin-bottom: 0;
 }
 
-a {
-    text-decoration: none;
-}
-
 .units {
     position: relative;
     top: -16px;
     font-size: 14px;
     font-family: "Times New Roman", Times, serif;
-}
-
-.active {
-    color: rgb(61, 71, 112);
-    font-weight: bold;
-    cursor: default;
-}
-
-.active:hover {
     color: rgb(61, 71, 112);
 }
 
@@ -137,4 +124,5 @@ a {
 
 .footer a {
     color: rgb(7, 7, 155);
+    text-decoration: none;
 }
