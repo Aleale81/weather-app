@@ -46,10 +46,10 @@ function formatDate(timestamp) {
         if (hours >= 9 && hours < 17) {
             card.classList.add("midday");
         }
-        if (hours >= 17 && hours < 20) {
+        if (hours >= 17 && hours < 21) {
             card.classList.add("afternoon");
         }
-        if (hours < 6 || hours >= 20) {
+        if (hours < 6 || hours >= 21) {
             card.classList.add("night");
             let date = document.querySelector("#date");
             let info = document.querySelector("#info");
